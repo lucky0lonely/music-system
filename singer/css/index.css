@@ -1,0 +1,83 @@
+@charset "UTF-8";
+@charset "GB2312";
+@charset "GBK";
+
+.wrapper main .body{
+    display: block;
+}
+.wrapper main .body .body-head,
+.wrapper main .body .body-main{
+    width:1190px;
+    margin:32px auto 0px;
+}
+.wrapper main .body .body-main{
+    min-height:680px;
+}
+main .body .body-head .charList,
+main .body .body-head .areaList,
+main .body .body-head .typeList{
+    height:100%;
+}
+main .body .body-head .areaList,
+main .body .body-head .typeList{
+    margin-top:17px;
+}
+main .body .body-head .charList::after,
+main .body .body-head .areaList::after,
+main .body .body-head .typeList::after,
+main .body .body-main .infoList::after{
+    content: '';
+    display: block;
+    clear:both;
+}
+.body .body-head .charList .charList-box,
+.body .body-head .areaList .areaList-box,
+.body .body-head .typeList .typeList-box{
+    height:28px;
+    line-height: 28px;
+    float:left;
+    font-size:18px;
+    margin-right:11px;
+    overflow: hidden;
+}
+.body .body-head .charList .charList-box.hotTag,
+.body .body-head .areaList .areaList-box.all,
+.body .body-head .typeList .typeList-box.all{
+    background-color:#46464e;
+}
+.body-head .charList .charList-box .charList-item,
+.body-head .areaList .areaList-box .areaList-item,
+.body-head .typeList .typeList-box .typeList-item{
+    color: #000;
+    display: inline-block;
+    height:100%;
+    padding:0 9px;
+}
+.body-head .charList .charList-box.hotTag .charList-item,
+.body-head .areaList .areaList-box.all .areaList-item,
+.body-head .typeList .typeList-box.all .typeList-item{
+    color:#fff;
+}
+.body .body-main .infoList .infoList-item{
+    float: left;
+    margin-right:10px;
+}
+.body-main .infoList .infoList-item .infoList-box{
+    width:221px;
+    height:218px;
+    text-align: center;
+}
+.infoList .infoList-item .infoList-box a{
+    display: block;
+    width:120px;
+    height:120px;
+    overflow: hidden;
+    margin:17px auto 0;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+.infoList .infoList-item .infoList-box p{
+    font-size:19px;
+    margin-top:18px;
+}

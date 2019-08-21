@@ -1,0 +1,144 @@
+@charset "UTF-8";
+@charset "GB2312";
+input,button{
+	border:none;
+}
+body{
+	font-family:'楷体';
+	background-image:url('../../bin/images/bg.jpg');
+	background-size:cover;
+	background-position:center;
+}
+button{
+	font-family:'楷体';
+}
+/*主体*/
+.wrap{
+	height:100%;
+	background:linear-gradient(to top,#272727,#211919,#1a1718);
+	background:-webkit-linear-gradient(top,#272727,#211919,#1a1718);
+	background:-o-linear-gradient(to top,#272727,#211919,#1a1718);
+	background:-moz-linear-gradient(to top,#272727,#211919,#1a1718);
+	background:-ms-linear-gradient(to top,#272727,#211919,#1a1718);
+}
+/*logo区*/
+.wrap .head .h-logo{
+	padding-top:37px;
+	margin-left:97px;
+}
+
+/*登录部分*/
+.wrap .main .loginWrap{
+	width:460px;
+	/*height:234px;*/
+	padding-bottom:14px;
+	border:6px solid #708090;
+	border:6px solid var(--border_color);
+	margin:64px auto 92px;
+}
+.loginWrap .form .w-title .title{
+	font-size:33px;
+	padding:10px 0 16px;
+	letter-spacing:21px;
+	text-align:center;
+}
+.loginWrap .form .w-login .loginBox,
+.loginWrap .form .w-login .passwordBox,
+.loginWrap .form .w-login .comfireBox{
+	margin-left:34px;
+	margin-bottom:25px;
+}
+.form .w-login .loginBox .user,
+.form .w-login .passwordBox .pass,
+.w-login .comfireBox p .comfire{
+	font-size:21px;
+}
+.form .w-login .loginBox .username,
+.form .w-login .passwordBox .password,
+.w-login .comfireBox p .safe{
+	width:152px;
+	height:24px;
+	padding-left:10px;
+	background-color:transparent !important;
+	color:#dedede !important;
+	border-bottom:1px solid #dedede;
+	border-bottom:1px solid var(--underline_color);
+}
+/*.form .w-login .loginBox .username:focus,*/
+/*.form .w-login .passwordBox .password:focus{*/
+	/*box-shadow: 0 0 2px 1px #38f;*/
+/*}*/
+.form .w-login .loginBox .userIcon,
+.form .w-login .passwordBox .passIcon{
+	display: inline-block;
+	width:26px;
+	height:26px;
+	background-position:-3px -73px;
+	vertical-align:middle;
+	margin-left:5px;
+}
+.form .w-login .passwordBox .passIcon{
+	background-position:-9px -43px;
+}
+.form .w-login .loginBox .w-tips,
+.form .w-login .passwordBox .w-tips{
+	display:inline-block;
+	margin-left:13px;
+}
+.w-login .loginBox .w-tips .tips,
+.w-login .passwordBox .w-tips .tips{
+	margin-left:15px;
+}
+.w-login .loginBox .w-tips .arrow,
+.w-login .passwordBox .w-tips .arrow{
+	display:block;
+	width:70px;
+	height:15px;
+	background-position:-4px -111px;
+	margin-top:-4px;
+}
+.loginWrap .form .w-login .submitBox{
+	text-align: center;
+}
+.form .w-login .submitBox .login{
+	width:79px;
+	height:30px;
+	font-size:26px;
+	cursor:pointer;
+	background-color:#708090;
+	background-color:var(--bg_color);
+	margin-left:120px;
+}
+.form .w-login .submitBox a{
+	float: right;
+	font-size:16px;
+	margin-right:66px;
+	margin-top:12px;
+	color:#dedede;
+	text-decoration:underline;
+}
+.loginWrap,.login{
+	border-radius:7px;
+	-webkit-border-radius:7px;
+	-o-border-radius:7px;
+	-moz-border-radius:7px;
+	-ms-border-radius:7px;
+}
+.w-login .comfireBox p span.safeCode{
+	display: inline-block;
+	width:111px;
+	height:35px;
+	font-size:23px;
+	letter-spacing:4px;
+	vertical-align:bottom;
+	margin-left:13px;
+	text-align:center;
+	line-height:35px;
+	color:#dedede;
+	border:1px solid #46464e;
+}
+/*版权部分*/
+.wrap .foot{
+	text-align: center;
+	padding:7px 0;
+}

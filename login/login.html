@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>登录</title>
+	<meta name="keywords" content="欢迎登录">
+	<meta name="description" content="欢迎在本站登录，享受您的音乐">
+	<link rel="stylesheet" href="	./../bin/css/public.css">
+	<link rel='stylesheet' href='./css/login.css'>
+	<!--[if lte IE 8]>测试IE,由于您是IE低版本浏览器,存在一些兼容性问题,请您移去其他浏览器访问<![endif]-->
+	<!--[if lte IE 8]>不支持CSS3属性,请您更换更高级的浏览器,如Chrome Google,Firefox,IE10及以上版本,Safari,Opera等等<![endif]-->
+	<!--[if lte IE 8]>IE存在问题,请移去其他浏览器访问<![endif]-->
+	<!--[if lte IE 8]><script>alert("由于您的浏览器对css3的不支持，以及一些新东西不识别，请更换最新的IE浏览器，或者Google Chrome、Firefox、Opera、Safari等，这样您的体验效果会更好喔~~");location.reload();</script><![endif]-->
+</head>
+<body>
+	<div class="wrap">
+		<div class="head">
+		<div class="h-logo">
+			<a href="demo.html">
+				<img src="../bin/images/logoS.jpg" width="276" height="150" alt="logo">
+			</a>
+		</div>
+	</div>
+		<div class="main">
+			<div class="loginWrap">
+				<form class="form" action="/" method="post">
+					<div class="w-title">
+						<h3 class="title public-color">欢迎登录</h3>
+					</div>
+					<div class="w-login">
+						<div class="loginBox">
+							<span class="user public-color">用&nbsp;户&nbsp;名 :</span>
+							&nbsp;<input type="text" autocomplete="off" class="username public-color" id="user">
+							<span class="userIcon icon"></span>
+							<div class="w-tips">
+								<span class="tips public-color">点这里</span>
+								<span class="arrow icon"></span>
+							</div>
+						</div>
+						<div class="passwordBox">
+							<span class="pass public-color">密 &nbsp;&nbsp;&nbsp;码 :</span>
+							&nbsp;<input type="password" class="password public-color" id="password">
+							<span class="passIcon icon"></span>
+							<div class="w-tips">
+								<span class="tips public-color">点这里</span>
+								<span class="arrow icon"></span>
+							</div>
+						</div>
+						<div class="comfireBox">
+							<p>
+								<span class="comfire public-color">验 证 码 : </span>
+								<input class="safe public-color" type="text">
+								<span class="safeCode"></span>
+							</p>
+						</div>
+						<div class="submitBox">
+							<button class="login public-color" id="login">登&nbsp;录</button>
+							<a href="../register/index.html">去注册>></a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="foot public-color">
+			<p>版权所有: 李华生、陈金诚</p>
+		</div>
+	</div>
+	<script src="js/login.js"></script>
+</body>
+</html>

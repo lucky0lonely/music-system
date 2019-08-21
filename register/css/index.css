@@ -1,0 +1,111 @@
+@charset "UTF-8";
+@charset "GBK";
+@charset "GB2312";
+input{
+    border:none;
+}
+.wrapper{
+    height:100%;
+    font-family:"楷体";
+    background:linear-gradient(to top,#272727,#211919,#1a1718);
+    background:-webkit-linear-gradient(top,#272727,#211919,#1a1718);
+    background:-o-linear-gradient(to top,#272727,#211919,#1a1718);
+    background:-moz-linear-gradient(to top,#272727,#211919,#1a1718);
+    background:-ms-linear-gradient(to top,#272727,#211919,#1a1718);
+}
+
+.wrapper .head .h-logo{
+    padding-top:37px;
+    margin-left:97px;
+}
+.wrapper .registerWrap{
+    width:500px;
+    margin:35px auto;
+    border:6px solid #708090;
+    border:6px solid var(--border_color);
+    border-radius:7px;
+    -webkit-border-radius:7px;
+    -moz-border-radius:7px;
+    -ms-border-radius:7px;
+    -o-border-radius:7px;
+}
+.wrapper .registerWrap #form{
+    font-size:21px;
+    color: #dedede;
+    color:var(--font_color);
+    text-align:center;
+}
+.wrapper .registerWrap #form .regTitle{
+    margin:11px 0px 22px;
+}
+.wrapper .registerWrap #form .sex{
+    margin-right:62px;
+}
+.registerWrap #form .sex span{
+    margin-left:3px;
+}
+.wrapper .registerWrap #form p{
+    margin-bottom:18px;
+}
+.registerWrap #form p input{
+    height:23px;
+    vertical-align: top;
+    background-color:#dedede;
+}
+.registerWrap #form p input[type="radio"]{
+    background-color: transparent;
+}
+.registerWrap #form p input[type="text"]{
+    width:158px;
+    padding-left:12px;
+}
+.registerWrap #form p .register{
+    width:64px;
+    font-size:19px;
+    font-family:"楷体";
+    color:#46464e;
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    -ms-border-radius:4px;
+    -o-border-radius:4px;
+    cursor:pointer;
+    margin-left:127px;
+}
+.registerWrap #form p a{
+    font-size:15px;
+    color:#dedede;
+    text-decoration:underline;
+    float:right;
+    margin-right:64px;
+    margin-top:8px;
+}
+.registerWrap #form p a:hover{
+    color:#38f;
+}
+#form .safe{
+    margin-bottom:29px;
+}
+#form .safe span{
+    margin-left:75px;
+}
+#form .safe .safeCode{
+    width:82px;
+    height:23px;
+    padding-left:8px;
+    background-color:#dedede;
+}
+#canvas{
+    vertical-align:top;
+    margin-left:27px;
+    border:1px solid #46464e;
+}
+.wrapper .footer{
+    height:57px;
+    line-height:57px;
+}
+.wrapper .footer .copyright{
+    font-size:17px;
+    color:#dedede;
+    text-align:center;
+}

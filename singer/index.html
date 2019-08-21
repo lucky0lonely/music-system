@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-cn" ondragstart="return false;">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="音乐，在线播放，音乐下载，音乐网站，音乐播放器，免费播放，潮流歌曲">
+    <meta name="description" content="搜索列表，智能的搜索列表，展现更多歌曲">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <meta name="author" content="李华生、陈金成">
+    <title>音乐</title>
+    <link rel="stylesheet" href="../bin/css/public.css">
+    <link rel="stylesheet" href="../bin/css/demo.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <!--[if lte IE 8]>测试IE,由于您是IE低版本浏览器,存在一些兼容性问题,请您移去其他浏览器访问<![endif]-->
+    <!--[if lte IE 8]>不支持CSS3属性,请您更换更高级的浏览器,如Chrome Google,Firefox,IE10及以上版本,Safari,Opera等等<![endif]-->
+    <!--[if lte IE 8]>IE存在问题,请移去其他浏览器访问<![endif]-->
+    <!--[if lte IE 8]><script>alert("由于您的浏览器对css3的不支持，以及一些新东西不识别，请更换最新的IE浏览器，或者Google Chrome、Firefox、Opera、Safari等，这样您的体验效果会更好喔~~");location.reload();</script><![endif]-->
+</head>
+<body>
+    <div class="wrapper">
+        <!--头部-->
+        <header>
+            <div class="head">
+                <!--logo-->
+                <div class="head_logo">
+                    <a href="../demo.html">
+                        <img src="../bin/images/logoS.jpg" width="276" height="150" alt="logo">
+                    </a>
+                    <div class="clear"></div>
+                </div>
+                <!--导航-->
+                <div class="head_nav">
+                    <ul class="h_navList">
+                        <li class="h_navList_hover">
+                            <div class="h_navHome">
+                                <a class="h_navHref" href="../demo.html">
+                                    <span>首页</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="h_navList_hover">
+                            <div class="h_navsinger">
+                                <a class="h_navHref" href="./index.html">
+                                    <span>歌手</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="h_navList_hover">
+                            <div class="h_navRadioStation">
+                                <a class="h_navHref" href="javascript:void(0)">
+                                    <span>电台</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="h_navList_hover">
+                            <div class="h_navMV">
+                                <a class="h_navHref" href="javascript:void(0)">
+                                    <span>MV</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <!--搜索-->
+                            <div class="h_navSearch">
+                                <div class="searchBox">
+                                    <input type="hidden">
+                                    <input type="text" id="searchInput" class="searchInput" value="" placeholder="请输入歌曲">
+                                    <i class="searchIcon"></i>
+                                </div>
+                                <div class="songBox">
+                                    <ul class="songList">
+                                    </ul>
+                                </div>
+                                <div class="searchWrap">
+                                    <a class="searchBtn" href="javascript:void(0)">
+                                        <span>搜索</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <div class="clear"></div>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+                <div class="head_login">
+                    <ul>
+                        <li class="loginLi rightLi">
+                            <div class="loginBox">
+                                <a href="../login/login.html">登录</a>
+                            </div>
+                        </li>
+                        <li class="registerLi rightLi">
+                            <div class="registerBox">
+                                <a href="../register/index.html">注册</a>
+                            </div>
+                        </li>
+                        <li class="introduceLi rightLi">
+                            <div class="introduceBox">
+                                <a href="../selfIntro/index.html">关于我们</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </header>
+        <!--身体-->
+        <main>
+            <div class="body">
+                <div class="body-head">
+                    <ul class="charList clear">
+                        <li class="charList-box hotTag">
+                            <a href="javascript:void(0)" class="charList-item">热门</a>
+                        </li>
+                        <li class="charList-box">
+                            <a href="javascript:void(0)" class="charList-item">A</a>
+                        </li>
+                        <li class="charList-box">
+                            <a href="javascript:void(0)" class="charList-item">B</a>
+                        </li>
+                        <li class="charList-box">
+                            <a href="javascript:void(0)" class="charList-item">C</a>
+                        </li>
+                        <li class="charList-box">
+                            <a href="javascript:void(0)" class="charList-item">D</a>
+                        </li>
+                        <li class="charList-box">
+                            <a href="javascript:void(0)" class="charList-item">E</a>
+                        </li>
+                        <li class="charList-box">
+                            <a href="javascript:void(0)" class="charList-item">F</a>
+                        </li>
+                        <li class="charList-box">
+                            <a href="javascript:void(0)" class="charList-item">G</a>
+                        </li>
+                        <li class="charList-box">
+                            <a href="javascript:void(0)" class="charList-item">H</a>
+                        </li>
+                        <li class="charList-box">
+                            <a href="javascript:void(0)" class="charList-item">I</a>
+                        </li>
+                        <li class="charList-box">
+                            <a href="javascript:void(0)" class="charList-item">J</a>
+                        </li>
+                        <li class="charList-box">
+                            <a href="javascript:void(0)" class="charList-item">K</a>
+                        </li>
+                        <li class="charList-box">
+                            <a href="javascript:void(0)" class="charList-item">L</a>
+                        </li>
+                        <li class="charList-box">
+                            <a href="javascript:void(0)" class="charList-item">M</a>
+                        </li>
+                        <li class="charList-box">
+                            <a href="javascript:void(0)" class="charList-item">N</a>
+                        </li>
+                        <li class="charList-box">
+                            <a href="javascript:void(0)" class="charList-item">O</a>
+                        </li>
+                        <li class="charList-box">
+                            <a href="javascript:void(0)" class="charList-item">P</a>
+                        </li>
+                        <li class="charList-box">
+                            <a href="javascript:void(0)" class="charList-item">Q</a>
+                        </li>
+                        <li class="charList-box">
+                            <a href="javascript:void(0)" class="charList-item">R</a>
+                        </li>
+                        <li class="charList-box">
+                            <a href="javascript:void(0)" class="charList-item">S</a>
+                        </li>
+                        <li class="charList-box">
+                            <a href="javascript:void(0)" class="charList-item">T</a>
+                        </li>
+                        <li class="charList-box">
+                            <a href="javascript:void(0)" class="charList-item">U</a>
+                        </li>
+                        <li class="charList-box">
+                            <a href="javascript:void(0)" class="charList-item">V</a>
+                        </li>
+                        <li class="charList-box">
+                            <a href="javascript:void(0)" class="charList-item">W</a>
+                        </li>
+                        <li class="charList-box">
+                            <a href="javascript:void(0)" class="charList-item">X</a>
+                        </li>
+                        <li class="charList-box">
+                            <a href="javascript:void(0)" class="charList-item">Y</a>
+                        </li>
+                        <li class="charList-box">
+                            <a href="javascript:void(0)" class="charList-item">Z</a>
+                        </li>
+                        <li class="charList-box">
+                            <a href="javascript:void(0)" class="charList-item">#</a>
+                        </li>
+                    </ul>
+                    <ul class="areaList clear">
+                        <li class="areaList-box all">
+                            <a href="#" class="areaList-item" data-area="all">全部</a>
+                        </li>
+                        <li class="areaList-box">
+                            <a href="#" class="areaList-item" data-area="CN">内地</a>
+                        </li>
+                        <li class="areaList-box">
+                            <a href="#" class="areaList-item" data-area="HKT">港台</a>
+                        </li>
+                        <li class="areaList-box">
+                            <a href="#" class="areaList-item" data-area="EA">欧美</a>
+                        </li>
+                        <li class="areaList-box">
+                            <a href="#" class="areaList-item" data-area="JA">日本</a>
+                        </li>
+                        <li class="areaList-box">
+                            <a href="#" class="areaList-item" data-area="KO">韩国</a>
+                        </li>
+                        <li class="areaList-box">
+                            <a href="#" class="areaList-item" data-area="">其他</a>
+                        </li>
+                    </ul>
+                    <ul class="typeList clear">
+                        <li class="typeList-box all">
+                            <a href="#" class="typeList-item" data-sex="all">全部</a>
+                        </li>
+                        <li class="typeList-box">
+                            <a href="#" class="typeList-item" data-sex="male">男</a>
+                        </li>
+                        <li class="typeList-box">
+                            <a href="#" class="typeList-item" data-sex="female">女</a>
+                        </li>
+                        <li class="typeList-box">
+                            <a href="#" class="typeList-item" data-sex="group">组合</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="body-main">
+                    <ul class="infoList clear">
+                    </ul>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot">
+                <p class="copyright">版权所有 : 李华生、陈金成</p>
+                <p class="phone">联系电话 : xxxxxxxxxxx</p>
+            </div>
+        </footer>
+    </div>
+    <script type="text/javascript">
+        init();
+        function init(){
+            var search = location.search;
+            if(search.indexOf('?') === -1 && search.indexOf('=') === -1){
+                return;
+            }
+            var temp = search.split('?')[1].split('=');
+            var obj = {};
+            obj[temp[0]] = temp[1];
+        }
+    </script>
+    <script src="../bin/js/search.js"></script>
+    <script src="../bin/js/singer.js"></script>
+    <script src="js/render.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

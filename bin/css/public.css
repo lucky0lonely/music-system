@@ -1,0 +1,104 @@
+/*设置字体码*/
+@charset "UTF-8";
+
+/*清除默认样式*/
+*{
+	margin:0;
+	padding:0;
+}
+body,p,h1,h2,h3,h4,h5,h6,ul,li,iframe,ol,dl,li,dt,dd,th,td,img,header,footer,section,aside,dir,address,article,area,input,textarea,button{
+	margin:0;
+	padding:0;
+}
+ul,li,ol{
+	list-style:none;
+}
+a,del,s,strike{
+	text-decoration:none;
+}
+input,button{
+	outline:none;
+}
+iframe{
+	border:none;
+}
+em,b,strong,big{
+	font-style:normal;
+}
+img{
+	border:none;
+}
+/**::before,*::after{*/
+	/*content:"";*/
+	/*clear:both;*/
+/*}*/
+h1,h2,h3,h4,h5,h6{
+	font-weight:normal;
+}
+@font-face {
+	font-family: huawenxingkai;
+	src: url('./../font/华文行楷.ttf');
+}
+body{
+	font-size:13px;
+	font-family:Arial,'微软雅黑','楷体',sans-serif;
+	background-color:#dedede;
+}
+:root{
+	--border_color:#708090;
+	--bg_color:#708090;
+    --music_info:#708090;
+	--underline_color:#dedede;
+	--font_color:#dedede;
+	--spot_color:#4646de;
+    --border_color:#46464e;
+    --hover_color:#46464e;
+	--public_bgColor:#46464e;
+}
+.body-bg{
+    background-image:url('../images/bg.jpg');
+}
+.public-color{
+	color:#dedede;
+	font-size:16px;
+}
+.icon{
+	background-image: url('../../login/images/icon.png');
+}
+.clear{
+	clear:both;
+}
+.publicIcon{
+	background-image:url('../images/icon.png');
+}
+.active{
+	background-color:#4646de;
+	background-color:var(--spot_color);
+}
+/*清除浮动*/
+.wrapper header .head .head_logo::after,
+.wrapper header .head .head_nav::after,
+.wrapper header .head .head_login::after,
+header .head .head_nav .h_navList::after,
+.head_login ul:after,
+main .banner .bannerList::after,
+.banner .spotBox .spotList::after,
+.body .musicWrap .popularRecommend .hot_musicWrap::after,
+.musicWrap .popularRecommend .hot_musicWrap .left_imgWrap::after,
+.musicWrap .popularRecommend .hot_musicWrap .right_contentSong::after,
+.body .musicWrap .mvWrap .mv-list::after,
+.body .musicWrap .rankingListWrap::after,
+.rankingListWrap .popularWrap .popularWrap-list::after,
+.body .musicWrap .rankingListWrap .foreignSongWrap::after,
+.body .musicWrap .rankingListWrap .popularWrap::after,
+.body .musicWrap .rankingListWrap .newSongWrap::after,
+main .body .fixedMusicWrap .fixed-musicImgWrap::after,
+main .body .fixedMusicWrap .fixed-musicInfoWrap::after,
+main .body .fixedMusicWrap .progressBarWrap::after,
+.fixedMusicWrap .progressBarWrap .progressBarBox .progressBar::after,
+.fixedMusicWrap .progressBarWrap .progressBarBox .currentTime::after,
+main .body .fixedMusicWrap .otherControlWrap::after{
+    display:table;
+    content:"";
+    clear:both;
+}

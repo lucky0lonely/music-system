@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-cn" ondragstart="return false;">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="音乐，在线播放，音乐下载，音乐网站，音乐播放器，免费播放，潮流歌曲">
+    <meta name="description" content="搜索列表，智能的搜索列表，展现更多歌曲">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <meta name="author" content="李华生、陈金成">
+    <title>音乐</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/demo.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <!--[if lte IE 8]>测试IE,由于您是IE低版本浏览器,存在一些兼容性问题,请您移去其他浏览器访问<![endif]-->
+    <!--[if lte IE 8]>不支持CSS3属性,请您更换更高级的浏览器,如Chrome Google,Firefox,IE10及以上版本,Safari,Opera等等<![endif]-->
+    <!--[if lte IE 8]>IE存在问题,请移去其他浏览器访问<![endif]-->
+    <!--[if lte IE 8]><script>alert("由于您的浏览器对css3的不支持，以及一些新东西不识别，请更换最新的IE浏览器，或者Google Chrome、Firefox、Opera、Safari等，这样您的体验效果会更好喔~~");location.reload();</script><![endif]-->
+</head>
+<body>
+    <div class="wrapper">
+        <!--头部-->
+        <header>
+            <div class="head">
+                <!--logo-->
+                <div class="head_logo">
+                    <a href="../../demo.html">
+                        <img src="../images/logoS.jpg" width="276" height="150" alt="logo">
+                    </a>
+                    <div class="clear"></div>
+                </div>
+                <!--导航-->
+                <div class="head_nav">
+                    <ul class="h_navList">
+                        <li class="h_navList_hover">
+                            <div class="h_navHome">
+                                <a class="h_navHref" href="../../demo.html">
+                                    <span>首页</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="h_navList_hover">
+                            <div class="h_navsinger">
+                                <a class="h_navHref" href="http://localhost:63342/musicSystem/singer/index.html">
+                                    <span>歌手</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="h_navList_hover">
+                            <div class="h_navRadioStation">
+                                <a class="h_navHref" href="javascript:void(0)">
+                                    <span>电台</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="h_navList_hover">
+                            <div class="h_navMV">
+                                <a class="h_navHref" href="javascript:void(0)">
+                                    <span>MV</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <!--搜索-->
+                            <div class="h_navSearch">
+                                <div class="searchBox">
+                                    <input type="hidden">
+                                    <input type="text" id="searchInput" class="searchInput" value="" placeholder="请输入歌曲">
+                                    <i class="searchIcon"></i>
+                                </div>
+                                <div class="songBox">
+                                    <ul class="songList">
+                                    </ul>
+                                </div>
+                                <div class="searchWrap">
+                                    <a class="searchBtn" href="javascript:void(0)">
+                                        <span>搜索</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <div class="clear"></div>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+                <div class="head_login">
+                    <ul>
+                        <li class="loginLi rightLi">
+                            <div class="loginBox">
+                                <a href="../../login/login.html">登录</a>
+                            </div>
+                        </li>
+                        <li class="registerLi rightLi">
+                            <div class="registerBox">
+                                <a href="../../register/index.html">注册</a>
+                            </div>
+                        </li>
+                        <li class="introduceLi rightLi">
+                            <div class="introduceBox">
+                                <a href="../../selfIntro/index.html">关于我们</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </header>
+        <!--内容区-->
+        <main>
+            <div class="contentWrap">
+                <!--搜索歌曲-->
+                <div class="searchWrap">
+                    <!--搜索框-->
+                    <div class="searchBox">
+                        <input type="text" class="localSearchInput" placeholder="请输入歌手、歌名"><button id="btnSearch">搜索</button>
+                    </div>
+                    <!--歌手信息-->
+                    <div class="singerWrap">
+                        <img src="../../bin/images/109951163971353073.jpg" width="140" height="140" class="singerImg" alt="">
+                        <div class="singerInfo">
+                            <p class="singerName">周杰伦</p>
+                            <p class="info">别名 : Jay Chou; 籍贯 : 中国; 专辑 : 《不爱我就拉倒》、《等你下课》、《周杰伦的床边故事》、《哎呦，不错哦》、《七里香》</p>
+                            <a href="javascript:void(0)" class="more">更多>></a>
+                        </div>
+                    </div>
+                    <!--歌曲标题-->
+                    <div class="searchTitle">
+                        <ul class="searchTitle-list">
+                            <li class="searchTitle-list-item">
+                                <h4 class="songTitle">歌曲</h4>
+                            </li>
+                            <li class="searchTitle-list-item">
+                                <h4 class="album">专辑</h4>
+                            </li>
+                            <li class="searchTitle-list-item">
+                                <h4 class="singer">歌手</h4>
+                            </li>
+                            <li class="searchTitle-list-item">
+                                <h4 class="songTime">时间</h4>
+                            </li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                    <!--搜索歌曲-->
+                    <div class="searchSongWrap">
+                        <ul class="searchSong-list">
+                            <!--<li class="searchSong-list-item">-->
+                                <!--<div class="songIconWrap">-->
+                                    <!--<a href="javascript:void(0)">搁浅</a>-->
+                                    <!--&lt;!&ndash;<span>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<a href="javascript:void(0)">&ndash;&gt;-->
+                                            <!--&lt;!&ndash;<i class="publicIcon"></i>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;</a>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<a href="javascript:void(0)">&ndash;&gt;-->
+                                            <!--&lt;!&ndash;<i class="publicIcon"></i>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;</a>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<a href="javascript:void(0)">&ndash;&gt;-->
+                                            <!--&lt;!&ndash;<i class="publicIcon"></i>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;</a>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;</span>&ndash;&gt;-->
+                                <!--</div>-->
+                                <!--<span class="album">《搁浅》</span>-->
+                                <!--<span class="singer">周杰伦</span>-->
+                                <!--<span class="time">04:30</span>-->
+                            <!--</li>-->
+                            <div class="clear"></div>
+                        </ul>
+                        <div class="fixWrap">
+                            <h5>您要找的歌曲或者人未找到^v^~~</h5>
+                            <p>不如来听听周杰伦的 <a href="javascript:void(0)">搁浅</a>吧!</p>
+                        </div>
+                        <div class="loadingWrap">
+                            <div class="shadow">Loading <span></span></div>
+                        </div>
+                    </div>
+                    <!--分页-->
+                    <div class="searchSongPage">
+                        <ul class="pageList">
+                            <li class="pageList-item">
+                                <input type="button" value="首页" class="homePage">
+                                <input type="button" value="上一页" class="prevPage">
+                            </li>
+                            <li class="pageList-item pageList-item-href">
+                                <!--<a href="index.html#page=1">1</a>-->
+                                <!--<a href="index.html#page=2">2</a>-->
+                                <!--<a href="javascript:void(0)">3</a>-->
+                                <!--<a href="javascript:void(0)">4</a>-->
+                                <!--<a href="javascript:void(0)">5</a>-->
+                            </li>
+                            <li class="pageList-item">
+                                <input type="button" value="下一页" class="nextPage">
+                                <input type="button" value="尾页" class="endPage">
+                            </li>
+                            <div class="clear"></div>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </main>
+        <footer>
+            <div class="foot">
+                <p class="copyright">版权所有 : 李华生、陈金诚</p>
+            </div>
+        </footer>
+    </div>
+    <!--<script src="../js/search.js" type="text/javascript"></script>-->
+    <!--<script src="../js/song.js" type="text/javascript"></script>-->
+    <!--<script src="../js/singer.js" type="text/javascript"></script>-->
+    <script src="./js/index.js" type="text/javascript"></script>
+</body>
+</html>

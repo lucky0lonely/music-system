@@ -1,0 +1,71 @@
+<!Doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="注册账号">
+    <meta name="description" content="欢迎注册">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <meta name="author" content="李华生、陈金成">
+    <title>注册</title>
+    <link rel="stylesheet" href="../bin/css/public.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <!--[if lte IE 8]>测试IE,由于您是IE低版本浏览器,存在一些兼容性问题,请您移去其他浏览器访问<![endif]-->
+    <!--[if lte IE 8]>不支持CSS3属性,请您更换更高级的浏览器,如Chrome Google,Firefox,IE10及以上版本,Safari,Opera等等<![endif]-->
+    <!--[if lte IE 8]>IE存在问题,请移去其他浏览器访问<![endif]-->
+    <!--[if lte IE 8]><script>alert("由于您的浏览器对css3的不支持，以及一些新东西不识别，请更换最新的IE浏览器，或者Google Chrome、Firefox、Opera、Safari等，这样您的体验效果会更好喔~~");location.reload();</script><![endif]-->
+</head>
+<body class="body-bg">
+    <div class="wrapper">
+        <div class="head">
+            <div class="h-logo">
+                <a href="../demo.html">
+                    <img src="../bin/images/logoS.jpg" width="276" height="150" alt="logo">
+                </a>
+            </div>
+        </div>
+        <div class="registerWrap">
+            <form action="/" id="form">
+                <h2 class="regTitle">欢迎注册</h2>
+                <p style="margin-bottom:22px;">
+                    用户名 : <input type="text" class="username" name="username" />
+                </p>
+                <p class="passBox">
+                    密 &nbsp;码 : <input type="password" class="password" name="password" />
+                </p>
+                <p class="sex">
+                    性 &nbsp;别 : <span>
+                                <input type="radio" id="male" name="sex" value="male">
+                                <label for="male">男</label>
+                            </span>
+                            <span>
+                                <input type="radio" id="female" name="sex" value="female">
+                                <label for="female">女</label>
+                            </span>
+                </p>
+                <p>
+                    手 &nbsp;机 : <input type="text" class="phone" name="phone" />
+                </p>
+                <div class="safe">
+                    <span>验证码 : </span>
+                    <input type="text" class="safeCode">
+                    <canvas id="canvas" width="112" height="30">
+                        Your browser does not support the HTML5 canvas tag.
+                    </canvas>
+                </div>
+                <p>
+                    <input type="button" class="register" value="注册">
+                    <a href="../login/login.html">
+                        <span>去登录>></span>
+                    </a>
+                </p>
+            </form>
+        </div>
+        <div class="footer">
+            <p class="copyright">版权所有 : 李华生、陈金诚</p>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <script src="./js/reg.js"></script>
+</body>
+</html>
