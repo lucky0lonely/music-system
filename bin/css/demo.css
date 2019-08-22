@@ -226,17 +226,13 @@ main .body .banner .bannerList{
     width:5625px;
     top:0;
     left:0;
+    transition: left 0.3s ease;
 }
 .body .banner .bannerList li.bannerLi{
     position: absolute;
     float:left;
     width:1125px;
     left:0px;
-    -webkit-transition: left 0.3s ease-in-out;
-    -moz-transition: left 0.3s ease-in-out;
-    -ms-transition: left 0.3s ease-in-out;
-    -o-transition: left 0.3s ease-in-out;
-    transition: left 0.3s ease-in-out;
 }
 .body .banner .bannerList li.bannerLi:nth-child(2){
     left:1125px;
@@ -776,7 +772,6 @@ main .body .fixedMusicWrap .otherControlWrap{
     border-radius: 5px;
     overflow: hidden;
     background-color:#46464e;
-    /*display: none;*/
     opacity: 0;
 }
 a.volumeWrap span .volumeBar .volumeBarMove{

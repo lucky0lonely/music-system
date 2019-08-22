@@ -36,10 +36,13 @@
         volumeNum = 0,
         musicArr = [];
 	init();
+    musicPlay.volume = 0.5;
 	function init(){
-        changeMove(50);
-        bindEvent();
-	}
+        setTimeout(()=>{
+            changeMove(50);
+            bindEvent();
+        },1000);
+    }
 	function bindEvent(){
 	    var temp = true;
 	    var tempLeftTime = null;
@@ -127,12 +130,11 @@
             e = e || window.event;
             fixedMusicWrap.style.bottom = '0px';
             volumeBar.style.opacity = '1';
-            volumeBar.style.display = 'block';
         };
         volumeWrap.onmouseleave = function(e){
             e = e || window.event;
             if(temp){
-                volumeBar.style.display = 'none';
+                volumeBar.style.opacity = '0';
             }
         };
         volumes.onclick = function(){
@@ -162,13 +164,14 @@
                 e = e || window.event;
                 disY = y;
                 temp = true;
-                volumeBar.style.display = 'none';
                 volumeBarSpot.onmousemove = null;
                 document.onmouseup = null;
             }
         };
         volumeBar.onmousedown = function(e){
             e = e || window.event;
+            e.stopPropagation();
+            e.preventDefault();
             var curY = (fixedMusicWrap.offsetTop + volumeWrap.offsetTop) - e.clientY;
             disY = curY;
             changeMove(curY);
@@ -255,13 +258,11 @@
             listSongName[i].index = i;
             listSinger[i].index = i;
             listSongName[i].onclick = function(){
-                // musicPlay.src = musicArr[this.index].url;
                 musicSrc(this.index);
                 index = this.index;
                 musicPlaying();
             };
             listSinger[i].onclick = function(){
-                // musicPlay.src = musicArr[this.index].url;
                 musicSrc(this.index);
                 index = this.index;
                 musicPlaying();
@@ -279,7 +280,6 @@
         fixed_showImg.src = musicArr[num].img;
         fixed_musicInfo_songName.innerText = musicArr[num].name;
         fixed_musicInfo_singerName.innerText = musicArr[num].author;
-        // musicPlay.src = musicArr[num].url;
         musicSrc(num);
         musicPlay.play();
         musicPlaying();
@@ -332,7 +332,6 @@
     }
     function musicPlaying(){
         if(musicPlay.src == ''){
-            // musicPlay.src = musicArr[index].url;
             musicSrc(index);
         }
         musicArr.length - 1 >= 1 ? (index >= 1 ? (index == musicArr.length - 1 ? (prevSongName.innerText = musicArr[index - 1].name,nextSongName.innerText = musicArr[(musicArr.length - 1) - index].name) : (prevSongName.innerText = musicArr[index - 1].name,nextSongName.innerText = musicArr[index + 1].name)) : (prevSongName.innerText='',nextSongName.innerText = musicArr[index + 1].name)) : '';
@@ -348,10 +347,9 @@
             progressBarMove.style.width = temp + 'px';
             currentTime.innerText = changeTime(musicPlay.currentTime);
         },false);
-        var temp = setTimeout(function(){
+        musicPlay.addEventListener('canplay',function () {
             durationTime.innerText = changeTime(musicPlay.duration);
-            clearTimeout(temp);
-        },120)
+        });
     }
     function changeTime(time){
         var minute = Math.floor(time / 60),
@@ -363,17 +361,5 @@
             second = '0' + second;
         }
         return minute + ':' + second;
-    }
-    function urlCrypto(url){
-        console.log(url);
-        var temp = '';
-        if(window.createObject){
-            temp = window.createObjectURL(url);
-        }else if(window.URL != undefined){
-            temp = window.URL.createObjectURL(url);
-        }else if(window.webkitURL != undefined){
-            temp = window.webkitURL.createObjectURL(url);
-        }
-        return temp;
     }
 }());

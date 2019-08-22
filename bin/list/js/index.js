@@ -5,7 +5,8 @@
     const obj = {};  //哈希数据
     let index = 1,  //分页索引，关键点
         pageCode = 0,   //总共页码
-        isCheck = true;  //是否是第一次渲染分页
+        isCheck = true,  //是否是第一次渲染分页
+        pageIndex = 0;
     init();
     //初始化
     function init() {
@@ -31,6 +32,7 @@
         if(isCheck){
             isCheck = false;
             page(data.data.total);
+            pageIndex = 2;
         }
     };
     //创建DOM
@@ -70,12 +72,16 @@
                 getHash();
                 location.hash = 'songName='+this.value + '&page=1';
                 dataParams(this.value,1);
+                index = 1;
+                isCheck = true;
             }
         };
         btnSearch.onclick = function () {
             getHash();
             location.hash = 'songName='+localSearchInput.value + '&page=1';
             dataParams(localSearchInput.value,1);
+            index = 1;
+            isCheck = true;
         };
         homePage.onclick = function () {
             index = 1;
@@ -86,19 +92,20 @@
             index = pageCode;
             tool();
             changeClass(pageList.children,pageList.children.length - 1,'active');
+            pageIndex = pageList.children.length - 1;
         };
         prevPage.onclick = function () {
             index--;
             if(index <= 0)return;
             tool();
-            var num = index - 1 >= 5  && index - 1 < 11 ? (pageList.children.length - 1) / 2 : (index > 11 ? index - (pageList.children.length + 1) : index - 1);
+            var num = index - 1 >= 5  && index - 1 < pageCode - 5 ? (pageList.children.length - 1) / 2 : (index - 1 >= pageCode - 5 ? (--pageIndex): index - 1);
             changeClass(pageList.children,num,'active');
         };
         nextPage.onclick = function () {
             index++;
             if(index > pageCode)return;
             tool();
-            var num = index - 1 >= 5  && index - 1 < 11 ? (pageList.children.length - 1) / 2 : (index > 11 ? index - (pageList.children.length + 1) : index - 1);
+            var num = index - 1 >= 5  && index - 1 < pageCode - 5 ? (pageList.children.length - 1) / 2 : (index - 1 > pageCode - 5 ? (++pageIndex) : (index - 1 === pageCode - 5 ? pageIndex : index - 1));
             changeClass(pageList.children,num,'active');
         }
     }
@@ -145,11 +152,11 @@
     //分页点击事件
     function pageChild(){
         for(let i = 0; i < pageList.children.length; i++){
-            if(pageList.children[i].target.tagName !== 'SPAN'){
+            if(pageList.children[i].tagName !== 'SPAN'){
                 pageList.children[i].onclick = function () {
                    index = +this.innerText;
                    tool();
-                   var num = index - 1 >= 5  && index - 1 < 11 ? (pageList.children.length - 1) / 2 : (index > 11 ? index - (pageList.children.length + 1) : index - 1);
+                   var num = index - 1 >= 5  && index - 1 < pageCode - 5 ? (pageList.children.length - 1) / 2 : (index > pageCode - 5 ? (index === pageCode ? (pageIndex = pageList.children.length - 1) : ++pageIndex) : index - 1);
                    changeClass(pageList.children,num,'active');
                 }
             }
