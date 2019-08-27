@@ -5,6 +5,7 @@
     let index = 0,
         timer = null;
     bindEvent();
+    auto();
     function bindEvent(){
         let leftArrow = document.getElementsByClassName('leftArrow_box')[0],
             rightArrow = document.getElementsByClassName('rightArrow_box')[0];
@@ -15,6 +16,7 @@
                 index = spotList.children.length - 1;
             }
             lantern(index);
+            auto();
         };
         rightArrow.onclick = function () {
             index++;
@@ -22,11 +24,13 @@
                 index = 0;
             }
             lantern(index);
+            auto();
         };
         spotList.onclick = function (e) {
             if(e.target.tagName === 'A'){
                 index = [...this.children].indexOf(e.target.parentElement);
                 lantern(index);
+                auto();
             }
         }
     }
@@ -40,7 +44,6 @@
         }
         spotList.children[index].firstElementChild.classList.add('active');
     }
-    auto();
     function auto(){
         clearInterval(timer);
         timer = setInterval(()=>{

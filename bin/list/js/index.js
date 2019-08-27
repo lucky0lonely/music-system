@@ -32,7 +32,7 @@
         if(isCheck){
             isCheck = false;
             page(data.data.total);
-            pageIndex = 2;
+            pageIndex = 1;
         }
     };
     //创建DOM
@@ -87,6 +87,7 @@
             index = 1;
             tool();
             changeClass(pageList.children,index - 1,'active');
+            pageIndex = 1;
         };
         endPage.onclick = function () {
             index = pageCode;
@@ -96,16 +97,25 @@
         };
         prevPage.onclick = function () {
             index--;
-            if(index <= 0)return;
+            if(index <= 0){
+                index = 1;
+                return;
+            }
             tool();
-            var num = index - 1 >= 5  && index - 1 < pageCode - 5 ? (pageList.children.length - 1) / 2 : (index - 1 >= pageCode - 5 ? (--pageIndex): index - 1);
+            if(index === pageCode - 6){
+                pageIndex = 1;
+            }
+            var num = index >= 5  && index < pageCode - 5 ? (pageList.children.length - 1) / 2 : (index >= pageCode - 5 ? (pageIndex-=1): index - 1);
             changeClass(pageList.children,num,'active');
         };
         nextPage.onclick = function () {
             index++;
-            if(index > pageCode)return;
+            if(index > pageCode){
+                index = pageCode;
+                return;
+            }
             tool();
-            var num = index - 1 >= 5  && index - 1 < pageCode - 5 ? (pageList.children.length - 1) / 2 : (index - 1 > pageCode - 5 ? (++pageIndex) : (index - 1 === pageCode - 5 ? pageIndex : index - 1));
+            var num = index >= 5  && index < pageCode - 5 ? (pageList.children.length - 1) / 2 : (index >= pageCode - 5 ? (pageIndex+=1) : index - 1);
             changeClass(pageList.children,num,'active');
         }
     }
@@ -131,7 +141,10 @@
    	//分页转换站
     function page(total){
         pageCode = Math.floor(total / 20);
-        if(pageCode < 2)return;
+        if(pageCode < 2){
+            document.getElementsByClassName('searchSongPage')[0].style.display = 'none';
+            return;
+        }
         renderPage(pageCode);
         document.getElementsByClassName('searchSongPage')[0].style.display = 'block';
     }
@@ -156,7 +169,7 @@
                 pageList.children[i].onclick = function () {
                    index = +this.innerText;
                    tool();
-                   var num = index - 1 >= 5  && index - 1 < pageCode - 5 ? (pageList.children.length - 1) / 2 : (index > pageCode - 5 ? (index === pageCode ? (pageIndex = pageList.children.length - 1) : ++pageIndex) : index - 1);
+                   var num = index >= 5  && index < pageCode - 5 ? (pageList.children.length - 1) / 2 : ( index >= pageCode - 5 ? (pageIndex = (index + 7) - pageCode) : index - 1);
                    changeClass(pageList.children,num,'active');
                 }
             }
@@ -164,7 +177,7 @@
     }
     //重置分页
     function reset(){
-        if(index >= 5 && index <= pageCode - 5){
+        if(index >= 5 && index < pageCode - 5){
             var str = '';
             var check = true;
             for(let i = 1; i <= pageCode; i++){
@@ -184,7 +197,7 @@
                 str += `<a href="index.html#songName=${i}&page=${i}">${i}</a>`;
             }
             pageList.innerHTML = str;
-        }else if(index > pageCode - 5){
+        }else if(index >= pageCode - 5){
             var check = true;
             var str = '';
             for(let i = 1; i <= pageCode; i++){

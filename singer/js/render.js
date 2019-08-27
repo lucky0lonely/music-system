@@ -20,21 +20,25 @@
         getContent(Object.assign({},word),sign);
     }
     function getContent(word,sign) {
-        var area = sign === 'nation' ? 'area' : sign;
         var tempArr = [];
         var checked = false;
         if(word.area === '')checked = true;
         if(word.area ==='all')word.area = '';
         if( word.sex === 'all')word.sex = '';
         if( word.word === 'all')word.word = '';
+        console.log(word);
         for(var i = 0 , len = singerArr.length; i < len; i++){
             if(singerArr[i].word.indexOf(word.word) >= 0 && singerArr[i].nation.indexOf(word.area) >= 0 && singerArr[i].sex.indexOf(word.sex) >= 0){
-                if(!checked){
+                if(word.sex === '' && word.area === ''){
                     tempArr.push(singerArr[i]);
-                }else{
-                    if(singerArr[i].nation === word.area){
-                        tempArr.push(singerArr[i])
-                    }
+                }else if(singerArr[i].sex === word.sex){
+                    if(!checked){
+                        tempArr.push(singerArr[i]);
+                    }else{
+                        if(singerArr[i].nation === word.area){
+                            tempArr.push(singerArr[i])
+                        }
+                    } 
                 }
             }
         }
