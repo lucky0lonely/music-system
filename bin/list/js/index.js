@@ -115,6 +115,9 @@
                 return;
             }
             tool();
+            if(index < pageCode - 5){
+                pageIndex = 1;
+            }
             var num = index >= 5  && index < pageCode - 5 ? (pageList.children.length - 1) / 2 : (index >= pageCode - 5 ? (pageIndex+=1) : index - 1);
             changeClass(pageList.children,num,'active');
         }

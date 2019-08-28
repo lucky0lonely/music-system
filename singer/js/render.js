@@ -29,7 +29,7 @@
         console.log(word);
         for(var i = 0 , len = singerArr.length; i < len; i++){
             if(singerArr[i].word.indexOf(word.word) >= 0 && singerArr[i].nation.indexOf(word.area) >= 0 && singerArr[i].sex.indexOf(word.sex) >= 0){
-                if(word.sex === '' && word.area === ''){
+                if(word.sex === '' && !checked){
                     tempArr.push(singerArr[i]);
                 }else if(singerArr[i].sex === word.sex){
                     if(!checked){
