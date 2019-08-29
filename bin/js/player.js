@@ -11,40 +11,24 @@
         nextSongName = document.getElementsByClassName('nextSongName')[0],
         currentTime = document.getElementsByClassName('currentTime')[0],
         durationTime = document.getElementsByClassName('durationTime')[0],
-        love = document.getElementsByClassName('love')[0],
         listIcon = document.getElementsByClassName('listIcon')[0],
         progressBar = document.getElementsByClassName('progressBar')[0],
         progressBarMove = document.getElementsByClassName('progressBarMove')[0],
         progressBarSpot = document.getElementsByClassName('progressBarSpot')[0],
         musicPlay = document.getElementById('musicPlay'),
-        volumeWrap = document.getElementsByClassName('volumeWrap')[0],
-        volumeBar = document.getElementsByClassName('volumeBar')[0],
-        volumeBarMove = document.getElementsByClassName('volumeBarMove')[0],
-        volumeBarSpot = document.getElementsByClassName('volumeBarSpot')[0],
-        volumes = document.getElementsByClassName('volume')[0],
-        playMusic = document.getElementsByClassName('playMusic'),
         fixedMusicList = document.getElementsByClassName('fixedMusicList')[0],
-        listMusicIcon = document.getElementsByClassName('listMusicIcon')[0],
         musicList = document.getElementsByClassName('musicList')[0];
 
 	var playing = true,
         index = 0,
-        loving = true,
         listing = true,
-        voluming = true,
-        moving = true,
-        volumeNum = 0,
-        musicArr = [];
+        moving = true;
+    window.musicArr = [];
 	init();
-    musicPlay.volume = 0.5;
 	function init(){
-        setTimeout(()=>{
-            changeMove(50);
-            bindEvent();
-        },1000);
+        bindEvent();
     }
 	function bindEvent(){
-	    var temp = true;
 	    var tempLeftTime = null;
         document.onmousemove = function(e){
             e = e || window.event;
@@ -104,15 +88,6 @@
 
             }
         },false);
-        love.onclick = function(){
-            love.classList.remove(love.classList[2]);
-            if(loving){
-                love.classList.add('likeIcon');
-            }else{
-                love.classList.add('default');
-            }
-            loving = !loving;
-        };
         listIcon.onclick = function () {
             if(listing){
                 fixedMusicList.style.left = '0px';
@@ -125,56 +100,6 @@
                 fixedMusicList.style.left = '-157px';
                 clearTimeout(tempLeftTime);
             },5000)
-        };
-        volumeWrap.onmouseover = function(e){
-            e = e || window.event;
-            fixedMusicWrap.style.bottom = '0px';
-            volumeBar.style.opacity = '1';
-        };
-        volumeWrap.onmouseleave = function(e){
-            e = e || window.event;
-            if(temp){
-                volumeBar.style.opacity = '0';
-            }
-        };
-        volumes.onclick = function(){
-            this.classList.remove(this.classList[2]);
-            if(voluming){
-                this.classList.add('noVolume');
-            }else{
-                this.classList.add('volumeDefault');
-            }
-            voluming = !voluming;
-        };
-        var disY = volumeNum,
-            y = 0;
-        volumeBarSpot.onmousedown = function (e) {
-            e = e || window.event;
-            e.stopPropagation();
-            e.preventDefault();
-            var curY = e.clientY - this.offsetWidth;
-            temp = false;
-            volumeBarSpot.onmousemove = function(e){
-                e = e || window.event;
-                var lastY = e.clientY - volumeBarSpot.offsetWidth;
-                y = (curY - lastY) + disY;
-                changeMove(y);
-            };
-            document.onmouseup = function(e){
-                e = e || window.event;
-                disY = y;
-                temp = true;
-                volumeBarSpot.onmousemove = null;
-                document.onmouseup = null;
-            }
-        };
-        volumeBar.onmousedown = function(e){
-            e = e || window.event;
-            e.stopPropagation();
-            e.preventDefault();
-            var curY = (fixedMusicWrap.offsetTop + volumeWrap.offsetTop) - e.clientY;
-            disY = curY;
-            changeMove(curY);
         };
         var disX = 0,
             x = 0;
@@ -214,31 +139,8 @@
             this.style.left = '-157px';
             listing = true;
         };
-        indexOfMusic();
 	}
-	function indexOfMusic(){
-	    var tempNum = 0;
-	    for(var i = 0, len = playMusic.length; i < len; i++){
-            playMusic[i].index = i;
-            playMusic[i].onclick = function(e){
-                var tempIndex = this.index;
-                var temp = e.path[3].children[1].children[0].innerText;
-                var singer = e.path[3].children[1].children[1].innerText;
-                for(var i = 0,songLen = songArr.length; i < songLen; i++){
-                    if(songArr[i].songUrl.indexOf(temp) != -1){
-                        if(tempNum == this.index){
-                            tempNum = this.index;
-                        }else{
-                            musicArr.push({url : songArr[i].songUrl,name : songArr[i].name,author : songArr[i].author,img : songArr[i].songImg});
-                            listMusic(musicArr);
-                        }
-                    }
-                }
-                tempNum = tempIndex;
-            }
-        }
-    }
-    function listMusic(arr){
+    window.listMusic = function listMusic(arr){
 	    if(arr.length == 0)return;
 	    var temp = '';
 	    for(var i = 0,len = arr.length; i < len; i++){
@@ -295,18 +197,6 @@
         progressBarSpot.style.left = num + 'px';
         progressBarMove.style.width = num + progressBarSpot.offsetWidth + 'px';
     }
-    function changeMove(num){
-        if(num >= volumeBar.offsetHeight - volumeBarSpot.offsetHeight){
-            num = volumeBar.offsetHeight - volumeBarSpot.offsetHeight;
-        }
-        if(num <= 0){
-            num = 0;
-        }
-        musicPlay.volume = (num + volumeBarSpot.offsetHeight) / 100;
-        volumeBarSpot.style.bottom = num + 'px';
-        volumeBarMove.style.height = num + volumeBarSpot.offsetHeight + '%';
-        volumeNum = num;
-    }
     function changePlay(target){
         if(musicPlay.src == '')return;
         var temp = controlPlay.classList[2];
@@ -337,6 +227,7 @@
         musicArr.length - 1 >= 1 ? (index >= 1 ? (index == musicArr.length - 1 ? (prevSongName.innerText = musicArr[index - 1].name,nextSongName.innerText = musicArr[(musicArr.length - 1) - index].name) : (prevSongName.innerText = musicArr[index - 1].name,nextSongName.innerText = musicArr[index + 1].name)) : (prevSongName.innerText='',nextSongName.innerText = musicArr[index + 1].name)) : '';
         fixed_musicInfo_songName.innerText = musicArr[index].name;
         fixed_musicInfo_singerName.innerText = musicArr[index].author;
+        fixed_showImg.src = musicArr[index].img;
         spotMove();
     }
     function spotMove(){

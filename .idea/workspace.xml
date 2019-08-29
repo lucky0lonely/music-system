@@ -7,8 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c81198b-25e6-4df4-9266-569c9f9375ee" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/list/js/index.js" afterPath="$PROJECT_DIR$/bin/list/js/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/singer/js/render.js" afterPath="$PROJECT_DIR$/singer/js/render.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/js/dataRender.js" afterPath="$PROJECT_DIR$/bin/js/dataRender.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/js/player.js" afterPath="$PROJECT_DIR$/bin/js/player.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,7 +23,20 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="647">
+              <caret line="1223" column="32" lean-forward="false" selection-start-line="1223" selection-start-column="26" selection-end-line="1223" selection-end-column="32" />
+              <folding>
+                <element signature="n#script#5;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -53,6 +68,9 @@
       <find>歌手</find>
       <find>volumeBarMove</find>
       <find>changeMove</find>
+      <find>listMusicIcon</find>
+      <find>music</find>
+      <find>fixed_showImg</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -67,7 +85,6 @@
         <option value="$PROJECT_DIR$/css/public.css" />
         <option value="$PROJECT_DIR$/register/css/index.css" />
         <option value="$PROJECT_DIR$/singer/demo.html" />
-        <option value="$PROJECT_DIR$/bin/js/dataRender.js" />
         <option value="$PROJECT_DIR$/bin/js/song.js" />
         <option value="$PROJECT_DIR$/bin/css/public.css" />
         <option value="$PROJECT_DIR$/login/css/login.css" />
@@ -84,14 +101,18 @@
         <option value="$PROJECT_DIR$/bin/js/search.js" />
         <option value="$PROJECT_DIR$/bin/js/index.js" />
         <option value="$PROJECT_DIR$/bin/css/demo.css" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/bin/js/player.js" />
         <option value="$PROJECT_DIR$/singer/index.html" />
         <option value="$PROJECT_DIR$/register/index.html" />
         <option value="$PROJECT_DIR$/login/login.html" />
         <option value="$PROJECT_DIR$/selfIntro/index.html" />
         <option value="$PROJECT_DIR$/singer/js/render.js" />
         <option value="$PROJECT_DIR$/bin/list/js/index.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/bin/js/player.js" />
+        <option value="$PROJECT_DIR$/bin/js/dataRender.js" />
+        <option value="$PROJECT_DIR$/bin/js/music.js" />
+        <option value="$PROJECT_DIR$/bin/js/volume.js" />
+        <option value="$PROJECT_DIR$/bin/js/love.js" />
       </list>
     </option>
   </component>
@@ -114,7 +135,9 @@
     <option name="width" value="943" />
     <option name="height" value="688" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -130,7 +153,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -147,13 +169,6 @@
               <item name="musicSystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="musicSystem" type="462c0819:PsiDirectoryNode" />
               <item name="bin" type="462c0819:PsiDirectoryNode" />
-              <item name="list" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="musicSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="musicSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="bin" type="462c0819:PsiDirectoryNode" />
-              <item name="list" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -165,6 +180,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -277,16 +293,18 @@
       <workItem from="1566433122002" duration="6023000" />
       <workItem from="1566909915456" duration="4468000" />
       <workItem from="1566955953816" duration="217000" />
+      <workItem from="1567048484908" duration="11570000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="412318000" />
+    <option name="totallyTimeSpent" value="423888000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17410715" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17410715" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -330,26 +348,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="14" />
+      <option name="time" value="16" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bin/css/demo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3302">
-          <caret line="127" column="29" lean-forward="true" selection-start-line="127" selection-start-column="29" selection-end-line="127" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="36" lean-forward="false" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo.html" />
     <entry file="file://$PROJECT_DIR$/login/js/login.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
@@ -438,31 +441,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/js/dataRender.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2484">
-          <caret line="101" column="43" lean-forward="false" selection-start-line="101" selection-start-column="43" selection-end-line="101" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/router/index.js" />
-    <entry file="file://$PROJECT_DIR$/bin/js/song.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="24" column="26" lean-forward="false" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
-          <folding>
-            <marker date="1558146586582" expanded="true" signature="44:210" ph="{&quot;name&quot;: '你,好不好?'...}" />
-            <marker date="1558146586582" expanded="true" signature="610:621" ph="{&quot;name&quot;: '慢慢喜欢你'...}" />
-            <marker date="1558146586582" expanded="true" signature="622:796" ph="{&quot;name&quot;: '年少有为'...}" />
-            <marker date="1558146586582" expanded="true" signature="32348:32359" ph="{&quot;name&quot;: '老伴'...}" />
-            <marker date="1558146586582" expanded="true" signature="32360:32543" ph="{&quot;name&quot;: '只要有想见的人，就不是孤身一人'...}" />
-            <marker date="1558146586582" expanded="true" signature="35844:35855" ph="{&quot;name&quot;: '最美的时光'...}" />
-            <marker date="1558146586582" expanded="true" signature="35856:36030" ph="{&quot;name&quot;: '只是太爱你'...}" />
-            <marker date="1558146586582" expanded="true" signature="44741:44752" ph="{&quot;name&quot;: '生来第一'...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/js/singer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
@@ -571,20 +550,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2198">
-          <caret line="1223" column="35" lean-forward="true" selection-start-line="1223" selection-start-column="35" selection-end-line="1223" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/js/player.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="150" column="50" lean-forward="false" selection-start-line="150" selection-start-column="50" selection-end-line="150" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/singerContent/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -610,18 +575,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
           <caret line="119" column="13" lean-forward="true" selection-start-line="119" selection-start-column="13" selection-end-line="119" selection-end-column="13" />
-          <folding>
-            <marker date="1566956135873" expanded="true" signature="1356:1787" ph="..." />
-            <marker date="1566956135873" expanded="true" signature="1409:1526" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/singer/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="34" column="51" lean-forward="true" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -636,6 +589,85 @@
             <marker date="1566956022624" expanded="true" signature="2069:2476" ph="..." />
             <marker date="1566956022624" expanded="true" signature="2124:2446" ph="..." />
             <marker date="1566956022624" expanded="true" signature="2247:2357" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/singer/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4761">
+          <caret line="34" column="51" lean-forward="false" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
+          <folding>
+            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/js/song.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="196" column="35" lean-forward="true" selection-start-line="196" selection-start-column="35" selection-end-line="196" selection-end-column="35" />
+          <folding>
+            <marker date="1558146586582" expanded="true" signature="44:210" ph="{&quot;name&quot;: '你,好不好?'...}" />
+            <marker date="1558146586582" expanded="true" signature="610:621" ph="{&quot;name&quot;: '慢慢喜欢你'...}" />
+            <marker date="1558146586582" expanded="true" signature="622:796" ph="{&quot;name&quot;: '年少有为'...}" />
+            <marker date="1558146586582" expanded="true" signature="32348:32359" ph="{&quot;name&quot;: '老伴'...}" />
+            <marker date="1558146586582" expanded="true" signature="32360:32543" ph="{&quot;name&quot;: '只要有想见的人，就不是孤身一人'...}" />
+            <marker date="1558146586582" expanded="true" signature="35844:35855" ph="{&quot;name&quot;: '最美的时光'...}" />
+            <marker date="1558146586582" expanded="true" signature="35856:36030" ph="{&quot;name&quot;: '只是太爱你'...}" />
+            <marker date="1558146586582" expanded="true" signature="44741:44752" ph="{&quot;name&quot;: '生来第一'...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/js/dataRender.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3276">
+          <caret line="12" column="44" lean-forward="false" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/js/music.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="70" lean-forward="false" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/js/player.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="84" column="43" lean-forward="false" selection-start-line="84" selection-start-column="36" selection-end-line="84" selection-end-column="43" />
+          <folding>
+            <marker date="1567052974297" expanded="true" signature="5400:5660" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/js/volume.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="20" column="24" lean-forward="true" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/js/love.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="54" column="60" lean-forward="false" selection-start-line="54" selection-start-column="60" selection-end-line="54" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="647">
+          <caret line="1223" column="32" lean-forward="false" selection-start-line="1223" selection-start-column="26" selection-end-line="1223" selection-end-column="32" />
+          <folding>
+            <element signature="n#script#5;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
