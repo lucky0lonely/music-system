@@ -27,7 +27,7 @@
 	init();
 	function init(){
         bindEvent();
-    }
+    };
 	function bindEvent(){
 	    var tempLeftTime = null;
         document.onmousemove = function(e){
@@ -139,9 +139,11 @@
             this.style.left = '-157px';
             listing = true;
         };
-	}
+	};
     window.listMusic = function listMusic(arr){
-	    if(arr.length == 0)return;
+	    if(arr.length == 0){
+            return false;
+        }
 	    var temp = '';
 	    for(var i = 0,len = arr.length; i < len; i++){
 	        temp += `<li>
@@ -152,7 +154,7 @@
         musicList.innerHTML = temp;
         listClick();
         musicPlaying();
-    }
+    };
     function listClick(){
         var listSongName = document.getElementsByClassName('listSongName'),
             listSinger = document.getElementsByClassName('listSinger');
@@ -170,7 +172,7 @@
                 musicPlaying();
             }
         }
-    }
+    };
     function autoMusic(num){
         if(musicArr[num] == null){
             controlPlay.classList.remove(controlPlay.classList[2]);
@@ -185,7 +187,7 @@
         musicSrc(num);
         musicPlay.play();
         musicPlaying();
-    }
+    };
 	function changeBar(num){
         if(num >= progressBar.offsetWidth - progressBarSpot.offsetWidth){
             num = progressBar.offsetWidth - progressBarSpot.offsetWidth;
@@ -196,7 +198,7 @@
         musicPlay.currentTime = Math.floor((num * musicPlay.duration) / (progressBar.offsetWidth - progressBarSpot.offsetWidth));
         progressBarSpot.style.left = num + 'px';
         progressBarMove.style.width = num + progressBarSpot.offsetWidth + 'px';
-    }
+    };
     function changePlay(target){
         if(musicPlay.src == '')return;
         var temp = controlPlay.classList[2];
@@ -215,11 +217,11 @@
             musicPlay.pause();
             playing = !playing;
         }
-    }
+    };
     function musicSrc(num){
         musicPlay.src = musicArr[num].url;
         changePlay();
-    }
+    };
     function musicPlaying(){
         if(musicPlay.src == ''){
             musicSrc(index);
@@ -229,7 +231,7 @@
         fixed_musicInfo_singerName.innerText = musicArr[index].author;
         fixed_showImg.src = musicArr[index].img;
         spotMove();
-    }
+    };
     function spotMove(){
         musicPlay.addEventListener('timeupdate',function(){
             var temp = musicPlay.currentTime / musicPlay.duration * progressBar.offsetWidth;
@@ -241,7 +243,7 @@
         musicPlay.addEventListener('canplay',function () {
             durationTime.innerText = changeTime(musicPlay.duration);
         });
-    }
+    };
     function changeTime(time){
         var minute = Math.floor(time / 60),
             second = Math.floor(time % 60);
