@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bin/css/public.css">
+    <link rel="stylesheet" href="../bin/css/demo.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="../util/getLocation.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!--头部-->
+        <header>
+            <div class="head">
+                <!--logo-->
+                <div class="head_logo">
+                    <a href="../index.html">
+                        <img src="../bin/images/logoS.jpg" width="276" height="150" alt="logo">
+                    </a>
+                    <div class="clear"></div>
+                </div>
+                <!--导航-->
+                <div class="head_nav">
+                    <ul class="h_navList">
+                        <li class="h_navList_hover">
+                            <div class="h_navHome">
+                                <a class="h_navHref" href="../index.html">
+                                    <span>首页</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="h_navList_hover">
+                            <div class="h_navsinger">
+                                <a class="h_navHref" href="./index.html">
+                                    <span>歌手</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="h_navList_hover">
+                            <div class="h_navRadioStation">
+                                <a class="h_navHref" href="javascript:void(0)">
+                                    <span>电台</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="h_navList_hover">
+                            <div class="h_navMV">
+                                <a class="h_navHref" href="javascript:void(0)">
+                                    <span>MV</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <!--搜索-->
+                            <div class="h_navSearch">
+                                <div class="searchBox">
+                                    <input type="hidden">
+                                    <input type="text" id="searchInput" class="searchInput" value=""
+                                        placeholder="请输入歌曲">
+                                    <i class="searchIcon"></i>
+                                </div>
+                                <div class="songBox">
+                                    <ul class="songList">
+                                    </ul>
+                                </div>
+                                <div class="searchWrap">
+                                    <a class="searchBtn" href="javascript:void(0)">
+                                        <span>搜索</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <div class="clear"></div>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+                <div class="head_login">
+                    <ul>
+                        <li class="loginLi rightLi">
+                            <div class="loginBox">
+                                <a href="../login/login.html">登录</a>
+                            </div>
+                        </li>
+                        <li class="registerLi rightLi">
+                            <div class="registerBox">
+                                <a href="../register/index.html">注册</a>
+                            </div>
+                        </li>
+                        <li class="introduceLi rightLi">
+                            <div class="introduceBox">
+                                <a href="../selfIntro/index.html">关于我们</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </header>
+        <!-- 身体 -->
+        <main class="container">
+            <div class="container_head">
+                <div class="left">
+                    <img src="https://y.gtimg.cn/music/photo_new/T001R300x300M000000CK5xN3yZDJt.jpg?max_age=2592000"
+                        alt="">
+                </div>
+                <div class="right">
+                    <h2 class="item_title">许嵩</h2>
+                    <div class="item_desc">
+                        <p>外文名：Vae</p>
+                        <p>别名：嵩哥</p>
+                        <p>国籍：中国</p>
+                        <p>出生地：安徽合肥</p>
+                        <p>职业：音乐人</p>
+                        <p>身高：180cm</p>
+                        <p>体重：60kg</p>
+                        <p>血型：A型</p>
+                    </div>
+                    <div class="item_achievement">
+                        <ul class="achievement_list">
+                            <li class="achievement_item">
+                                单曲<span class="single_num">287</span>
+                            </li>
+                            <li class="achievement_item">
+                                专辑<span class="album_num">30</span>
+                            </li>
+                            <li class="achievement_item">
+                                MV<span class="mv_num">227</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="item_tool">
+                        <button class="attention">关注</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container_body">
+                <div class="song_box">
+                    <div class="song_head">
+                        <h3 class="song_title">热门歌曲</h3>
+                        <a class="song_more" href="#">全部></a>
+                    </div>
+                    <div class="song_list">
+                        <ul class="song_list_head">
+                            <li class="song_list_head_item song_list_head_name">歌曲</li>
+                            <li class="song_list_head_item song_list_head_album">专辑</li>
+                            <li class="song_list_head_item song_list_head_time">时长</li>
+                        </ul>
+                        <ul class="song_list_list">
+                            <li class="song_list_list_item">
+                                <div class="item_song_box">
+                                    <div class="item_sign item_songName">
+                                        <a href="#" class="common song_href">雅俗共赏</a>
+                                    </div>
+                                    <div class="item_sign item_albumName">
+                                        <a href="#" class="common song_alubm">青年晚报</a>
+                                    </div>
+                                    <div class="item_sign item_time">
+                                        <span class="common time_sign">04:09</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="song_list_list_item">
+                                <div class="item_song_box">
+                                    <div class="item_sign item_songName">
+                                        <a href="#" class="common song_href">雅俗共赏</a>
+                                    </div>
+                                    <div class="item_sign item_albumName">
+                                        <a href="#" class="common song_alubm">青年晚报</a>
+                                    </div>
+                                    <div class="item_sign item_time">
+                                        <span class="common time_sign">04:09</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="song_list_list_item">
+                                <div class="item_song_box">
+                                    <div class="item_sign item_songName">
+                                        <a href="#" class="common song_href">雅俗共赏</a>
+                                    </div>
+                                    <div class="item_sign item_albumName">
+                                        <a href="#" class="common song_alubm">青年晚报</a>
+                                    </div>
+                                    <div class="item_sign item_time">
+                                        <span class="common time_sign">04:09</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="song_list_list_item">
+                                <div class="item_song_box">
+                                    <div class="item_sign item_songName">
+                                        <a href="#" class="common song_href">雅俗共赏</a>
+                                    </div>
+                                    <div class="item_sign item_albumName">
+                                        <a href="#" class="common song_alubm">青年晚报</a>
+                                    </div>
+                                    <div class="item_sign item_time">
+                                        <span class="common time_sign">04:09</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="song_list_list_item">
+                                <div class="item_song_box">
+                                    <div class="item_sign item_songName">
+                                        <a href="#" class="common song_href">雅俗共赏</a>
+                                    </div>
+                                    <div class="item_sign item_albumName">
+                                        <a href="#" class="common song_alubm">青年晚报</a>
+                                    </div>
+                                    <div class="item_sign item_time">
+                                        <span class="common time_sign">04:09</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="song_list_list_item">
+                                <div class="item_song_box">
+                                    <div class="item_sign item_songName">
+                                        <a href="#" class="common song_href">雅俗共赏</a>
+                                    </div>
+                                    <div class="item_sign item_albumName">
+                                        <a href="#" class="common song_alubm">青年晚报</a>
+                                    </div>
+                                    <div class="item_sign item_time">
+                                        <span class="common time_sign">04:09</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="song_list_list_item">
+                                <div class="item_song_box">
+                                    <div class="item_sign item_songName">
+                                        <a href="#" class="common song_href">雅俗共赏</a>
+                                    </div>
+                                    <div class="item_sign item_albumName">
+                                        <a href="#" class="common song_alubm">青年晚报</a>
+                                    </div>
+                                    <div class="item_sign item_time">
+                                        <span class="common time_sign">04:09</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="song_list_list_item">
+                                <div class="item_song_box">
+                                    <div class="item_sign item_songName">
+                                        <a href="#" class="common song_href">雅俗共赏</a>
+                                    </div>
+                                    <div class="item_sign item_albumName">
+                                        <a href="#" class="common song_alubm">青年晚报</a>
+                                    </div>
+                                    <div class="item_sign item_time">
+                                        <span class="common time_sign">04:09</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="song_list_list_item">
+                                <div class="item_song_box">
+                                    <div class="item_sign item_songName">
+                                        <a href="#" class="common song_href">雅俗共赏</a>
+                                    </div>
+                                    <div class="item_sign item_albumName">
+                                        <a href="#" class="common song_alubm">青年晚报</a>
+                                    </div>
+                                    <div class="item_sign item_time">
+                                        <span class="common time_sign">04:09</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="song_list_list_item">
+                                <div class="item_song_box">
+                                    <div class="item_sign item_songName">
+                                        <a href="#" class="common song_href">雅俗共赏</a>
+                                    </div>
+                                    <div class="item_sign item_albumName">
+                                        <a href="#" class="common song_alubm">青年晚报</a>
+                                    </div>
+                                    <div class="item_sign item_time">
+                                        <span class="common time_sign">04:09</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="similar">
+                <h5 class="similar_title">相似歌手</h5>
+                <ul class="similar_list">
+                    <li class="similar_list_item">
+                        <div class="singer">
+                            <img src="https://y.gtimg.cn/music/photo_new/T001R150x150M000001z2JmX09LLgL.jpg?max_age=2592000"
+                                alt="">
+                            <p class="sing_name">汪苏泷</p>
+                        </div>
+                    </li>
+                    <li class="similar_list_item">
+                        <div class="singer">
+                            <img src="https://y.gtimg.cn/music/photo_new/T001R150x150M000001z2JmX09LLgL.jpg?max_age=2592000"
+                                alt="">
+                            <p class="sing_name">汪苏泷</p>
+                        </div>
+                    </li>
+                    <li class="similar_list_item">
+                        <div class="singer">
+                            <img src="https://y.gtimg.cn/music/photo_new/T001R150x150M000001z2JmX09LLgL.jpg?max_age=2592000"
+                                alt="">
+                            <p class="sing_name">汪苏泷</p>
+                        </div>
+                    </li>
+                    <li class="similar_list_item">
+                        <div class="singer">
+                            <img src="https://y.gtimg.cn/music/photo_new/T001R150x150M000001z2JmX09LLgL.jpg?max_age=2592000"
+                                alt="">
+                            <p class="sing_name">汪苏泷</p>
+                        </div>
+                    </li>
+                    <li class="similar_list_item">
+                        <div class="singer">
+                            <img src="https://y.gtimg.cn/music/photo_new/T001R150x150M000001z2JmX09LLgL.jpg?max_age=2592000"
+                                alt="">
+                            <p class="sing_name">汪苏泷</p>
+                        </div>
+                    </li>
+                    <li class="similar_list_item">
+                        <div class="singer">
+                            <img src="https://y.gtimg.cn/music/photo_new/T001R150x150M000001z2JmX09LLgL.jpg?max_age=2592000"
+                                alt="">
+                            <p class="sing_name">汪苏泷</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+        <footer>
+            <div class="foot">
+                <p class="copyright">版权所有 : 李华生、陈金成</p>
+                <p class="phone">联系电话 : xxxxxxxxxxx</p>
+            </div>
+        </footer>
+    </div>
+    <script src="../bin/js/search.js" type="text/javascript"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

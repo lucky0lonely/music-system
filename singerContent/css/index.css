@@ -1,0 +1,167 @@
+@charset "utf-8";
+@charset "GBK2133";
+
+
+.wrapper .container{
+    width: 1190px;
+    margin: 0 auto;
+    margin-bottom: 29px;
+}
+.wrapper .container .container_head{
+    display: flex;
+    margin-top: 46px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #ccc;
+}
+.container .container_head .left img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+.wrapper .container .container_head .right{
+    flex: 1;
+    padding-top: 20px;
+    padding-left: 31px;
+}
+.container .container_head .right .item_title{
+    font-size: 31px;
+    letter-spacing: 4px;
+    margin: 15px 0;
+}
+.container .container_head .right .item_desc{
+    display: flex;
+    font-size: 16px;
+    margin: 6px 0;
+}
+.container_head .right .item_desc p{
+    margin: 0 5px 0 0;
+}
+.container .container_head .right .item_achievement{
+    margin: 6px 0;
+}
+.container_head .right .item_achievement .achievement_list{
+    display: flex;
+    font-size: 17px;
+    align-content: center;
+}
+.right .item_achievement .achievement_list .achievement_item{
+    border-right: 1px solid #000;
+    margin-left: 12px;
+}
+.item_achievement .achievement_list .achievement_item span{
+    font-size: 25px;
+    margin: 0 16px;
+}
+.right .item_achievement .achievement_list .achievement_item:first-of-type{
+    margin-left: 0;
+}
+.right .item_achievement .achievement_list .achievement_item:last-of-type{
+    border: none;
+}
+.container .container_head .right .item_tool{
+    margin: 12px 0;
+}
+.container_head .right .item_tool .attention{
+    width: 96px;
+    height: 37px;
+    font-family: '楷体';
+    font-size: 23px;
+    color: #fff;
+    border-radius: 4px;
+    background-color: #31c27c;
+    border: 1px solid #31c27c;
+    cursor: pointer;
+}
+.container_head .right .item_tool .attention:hover{
+    background-color: orange;
+    border-color: orange;
+}
+.container_head .right .item_tool .attention.active{
+    background-color: #f03;
+    border-color: #f03;
+}
+.wrapper .container .container_body{
+    margin-top: 29px;
+}
+.container .container_body .song_box .song_head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container_body .song_box .song_head .song_title{
+    font-size: 24px;
+}
+.container_body .song_box .song_head .song_more{
+    font-size: 15px;
+    color: #000;
+    letter-spacing: 2px;
+}
+.container .container_body .song_box .song_list{
+    margin-top: 17px;
+}
+.container_body .song_box .song_list .song_list_head{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 18px;
+    padding: 8px 13px;
+    background-color: rgba(248,248,255,0.1);
+}
+.song_box .song_list .song_list_head .song_list_head_item{
+    flex: 1;
+}
+.container_body .song_box .song_list .song_list_list{
+    padding: 0 13px;
+    margin-top: 17px;
+}
+.song_box .song_list .song_list_list .song_list_list_item:nth-of-type(odd){
+    background-color: rgba(240,240,240,0.1);
+}
+.song_list .song_list_list .song_list_list_item .item_song_box{
+    display: flex;
+    height: 43px;
+}
+.song_list_list .song_list_list_item .item_song_box .item_sign{
+    flex: 1;
+    padding-left: 7px;
+}
+.song_list_list_item .item_song_box .item_sign .common{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 17px;
+    justify-content: center;
+    color: #000;
+}
+.wrapper .container .similar{
+    margin-top: 32px;
+}
+.wrapper .container .similar .similar_title{
+    font-size: 22px;
+    margin: 16px 0;
+}
+.wrapper .container .similar .similar_list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.similar .similar_list .similar_list_item .singer{
+    width: 160px;
+    height: 160px;
+    text-align: center;
+    padding: 8px 6px;
+    box-shadow: 0 0 1px 0 #999;
+}
+.similar_list .similar_list_item .singer img{
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.similar_list .similar_list_item .singer .sing_name{
+    font-size:18px;
+    margin-top: 7px;
+}
